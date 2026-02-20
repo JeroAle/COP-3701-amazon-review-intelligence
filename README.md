@@ -26,4 +26,8 @@ The database will include information about:
 - Products and categories  
 - Customers  
 - Reviews and ratings  
-- Orders and sales history  
+- Orders and sales history
+
+## Notes / Challenging Aspects
+- The model includes multiple relationship types (1:1, 1:N, M:N).
+- Many-to-many relationships are implemented using bridge entities.
