@@ -1,4 +1,4 @@
-# Database ER Diagram – E-Commerce System
+# Database ER Diagram 
 
 ## Entities
 
