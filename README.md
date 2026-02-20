@@ -1,9 +1,16 @@
 # COP 3710 - Database Project  
 ## Amazon Product Review & Sales Intelligence Database
 
-### Application Domain
-This project focuses on building a relational database for an e-commerce system using Amazon product and review data.  
-The goal is to store and organize product information, customer reviews, ratings, and sales records in a structured and efficient way.
+## Application Domain
+
+This project designs a relational database for an e-commerce system using Amazon-style product, sales, and review data. The database will be implemented in **MariaDB**.
+
+The system stores and organizes information about products, categories, customers, orders (sales history), and customer reviews/ratings in a normalized structure.
+
+## Goals
+- Design and implement a normalized schema in MariaDB.
+- Store product details, customer accounts, order records, and review data.
+- Support SQL queries for analyzing sales trends, product performance, and customer feedback.
 
 ### Project Goals
 - Design and implement a normalized database for e-commerce data.
