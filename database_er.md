@@ -1,4 +1,4 @@
-# Database ER Diagram (Revised for Part C – Final Normalized Relational Schema / BCNF)
+# Database ER Diagram (Final Normalized Relational Schema / BCNF)
 
 ## Entities / Relations
 
