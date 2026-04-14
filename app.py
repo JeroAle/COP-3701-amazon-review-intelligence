@@ -13,8 +13,8 @@ if "page" not in st.session_state:
 def connect_db():
     return mysql.connector.connect (
         host="localhost",
-        user="appuser",
-        password="app1234",
+        user="root",
+        password="rinter44",
         database="amazon_review_intelligence"
     )
 
