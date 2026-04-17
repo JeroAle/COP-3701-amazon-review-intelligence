@@ -201,6 +201,41 @@ def show_top_10_categories_chart():
 
     st.pyplot(fig)
 
+def get_order_status_counts():
+    query = """
+        SELECT
+            status,
+            COUNT(order_id) AS total_orders
+        FROM Orders
+        GROUP BY status
+        ORDER BY total_orders DESC
+    """
+    df = run_select_query(query)
+    df.columns = ["Status", "Total Orders"]
+    df["Status"] = df["Status"].str.title()
+    return df
+
+def show_order_status_pie_chart():
+    df = get_order_status_counts()
+
+    if df.empty:
+        st.write("No order status data available.")
+        return
+
+    fig, ax = plt.subplots()
+
+    ax.pie(
+        df["Total Orders"],
+        labels=df["Status"],
+        autopct="%1.1f%%",
+        startangle=90
+    )
+
+    ax.set_title("Order Status Distribution", fontweight="bold", fontsize=14)
+    ax.axis("equal")
+
+    st.pyplot(fig)
+
 
 
 
@@ -282,9 +317,10 @@ elif st.session_state.page == "orders":
     # back button on the bottom right
     add_back_button()
     
+    # add a summary of number of orders in each status with pie chart
+    show_order_status_pie_chart()
+    
     # print all orders to the page
     st.subheader("Order List")
     orders_df = get_all_orders()
     st.dataframe(orders_df, use_container_width=True, hide_index=True)
-    
-    
