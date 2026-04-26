@@ -14,7 +14,7 @@ def connect_db():
     return mysql.connector.connect (
         host="localhost",
         user="root",
-        password="rinter44",
+        password="Rinter44",
         database="amazon_review_intelligence"
     )
 
